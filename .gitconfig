@@ -1,0 +1,23 @@
+[user]
+	name = Malabya
+	email = malabya35@gmail.com
+[core]
+	excludesfile = /Users/malabya/.gitignore_global
+	pager = diff-so-fancy | less --tabs=4 -RFX
+	autocrlf = false
+    editor = code --wait
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[commit]
+	template = /Users/malabyatewari/.stCommitMsg
+[color]
+	ui = true
